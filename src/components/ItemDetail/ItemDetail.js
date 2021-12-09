@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-const ItemDetail = ({item}) => {
+
+const ItemDetail = ({item, setItem}) => {
+
     return (
         <div>
-            <img alt={item.title} src={item.thumbnail}/>
+            <img alt={item.name} src={item.pictures[0].url}/>
             <div>
-                <p>{item.title}</p>
-                <p>$ {item.price}</p>
+                <p>{item.name}</p>
+                <p>$ {item.buy_box_winner.price}</p>
             </div>
         </div>
     )
