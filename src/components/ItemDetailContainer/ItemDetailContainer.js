@@ -4,7 +4,16 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router';
 import NavBar from '../NavBar/NavBar';
 
-const ItemDetailContainer = () => {
+import './itemDetailContainer.css';
+
+const ItemDetailContainer = ({
+    increment, 
+    decrement, 
+    count, 
+    setProductSelected, 
+    setCartProducts,
+    cartProducts,
+    productSelected }) => {
 
     const params = useParams();
     console.log(params.id)
@@ -26,15 +35,22 @@ const ItemDetailContainer = () => {
         item.hasOwnProperty('name')
         ?
         (
-            <>
+            <div className='detail-container'>
                 <ItemDetail 
                     item={item} 
                     detailProduct={detailProduct} 
                     setDetailProduct={setDetailProduct}
                     setItem={setItem}
+                    increment={increment}
+                    decrement={decrement}
+                    count={count}
+                    setCartProducts={setCartProducts}
+                    setProductSelected={setProductSelected}
+                    cartProducts={cartProducts}
+                    productSelected={productSelected}
                     // handleClick={handleClick}
                 />
-            </>
+            </div>
         )
         :
         

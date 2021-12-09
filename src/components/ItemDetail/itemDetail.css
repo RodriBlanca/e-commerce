@@ -1,0 +1,84 @@
+.detail {
+  width: 800px;
+  height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #ffffff;
+  box-shadow: 1px 2px 6px 1px gray;
+}
+
+.detail-img {
+  margin: 10px 0;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.detail-img__pic {
+  height: 100%;
+}
+
+.detail-info {
+  border-left: 1px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.detail-info__price {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.amount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.amount-increment,
+.amount-decrement {
+  cursor: pointer;
+  background-color: #ffffff;
+  /* border: 1px solid #eeeeee; */
+  border: none;
+}
+
+.amount-decrement__arrow,
+.amount-increment__arrow {
+  height: 15px;
+  width: 15px;
+}
+
+.amount-increment__arrow {
+  transform: rotateX(180deg);
+}
+
+.amount-text {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.add {
+  width: 100%;
+  height: 35px;
+}
+
+.add-button {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  font-size: 1.3rem;
+}
+
+.add-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
